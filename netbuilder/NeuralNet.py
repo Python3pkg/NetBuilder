@@ -189,7 +189,7 @@ class Network(object):
         try:
             return self.weights[idx]
         except:
-            print("""Could not find layer {0} in network.\nNetwork has {1} layers.""".format(idx, self.size))
+            print(("""Could not find layer {0} in network.\nNetwork has {1} layers.""".format(idx, self.size)))
 
     def _get_model(self):
         """Returns a dictionary of network parameters that can be used for a configuration file. This function is used when saving the network.
@@ -453,7 +453,7 @@ class Network(object):
         try:    #check that batch_size makes sense
                 assert(batch_size <= num_samples)
         except AssertionError:
-                print ("""Batch size '{0}' is bigger than number of samples available: '{1}'""".format(batch_size,num_samples))
+                print(("""Batch size '{0}' is bigger than number of samples available: '{1}'""".format(batch_size,num_samples)))
                 raise
         #----------------------------------------------------------------------
         if 0 < batch_size < num_samples:    #here we do mini batch or online
@@ -544,7 +544,7 @@ class Network(object):
         if finished:
             print("Network has reached a state of minimum error.")
         #print("Error: {0}\tEpoch {1}".format(error,iterCount))
-        print("""Epoch {0} completed""".format(epoch),'Error:',error)
+        print(("""Epoch {0} completed""".format(epoch),'Error:',error))
 
     def _cleanup(self):
         """Sets containers back to their original state. It is a test function for now.

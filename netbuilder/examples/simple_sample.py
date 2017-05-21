@@ -59,7 +59,7 @@ epochs = 1000
 tolerance = 1E-10
 trainingSet = xor                           #change this to any of the training sets above: trainingSet = aand, etc
 
-print("="*80)
+print(("="*80))
 print("Training...\n")
 net = Network(topology, learningRate=0.1, momentum=0.1)
 net.train(trainingSet,epochs,tolerance, batch=False)         #training begins
@@ -73,9 +73,9 @@ print("INPUTS    |\tPREDICTION\t   | EXPECTED")
 for inputs,target in trainingSet:
     out = net.feedforward(inputs)
 
-    print("{0} {1} \t {2} \t\t\t {3}   ".format(inputs[0],inputs[1],out[0],target[0]))              #for some reason, the last line is not tabbed in
+    print(("{0} {1} \t {2} \t\t\t {3}   ".format(inputs[0],inputs[1],out[0],target[0])))              #for some reason, the last line is not tabbed in
     
-print("="*80)
+print(("="*80))
 
 
 #extracting the value of the training pattern:

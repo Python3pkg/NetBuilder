@@ -55,7 +55,7 @@ def load_model(directory,is_csv=False):
     net = Network()
     net._init_from_file(params=parameters,weights_dict=weights_dict)
     
-    print("Model {0} loaded correctly".format(net.name))
+    print(("Model {0} loaded correctly".format(net.name)))
     
     return net
 
@@ -83,7 +83,7 @@ def save_model(net,directory='.',csv_mode=False):
     net_folder_name = "{0}.{1}".format(folder_name_base,fold_index)
     #pass
     initial_working_dir = os.getcwd()
-    print("Working directory when calling save:",initial_working_dir)
+    print(("Working directory when calling save:",initial_working_dir))
     
     #move to specified directory and create output folder
     os.chdir(directory)
@@ -112,7 +112,7 @@ def save_model(net,directory='.',csv_mode=False):
             mapped_names = {key:mat for key,mat in zip(names,net.weights)}
             np.savez(file_to_save, **mapped_names)
         
-        print("""Weights saved successfully in file {0}""".format(file_to_save))
+        print(("""Weights saved successfully in file {0}""".format(file_to_save)))
     except:
         print("Something went wrong when saving weights")
         raise
@@ -130,7 +130,7 @@ def save_model(net,directory='.',csv_mode=False):
         yaml.dump(data=parameters,stream=f)
     
     
-    print("Files saved successfully at location:",output_path)
+    print(("Files saved successfully at location:",output_path))
     
     #When everthing is done, go back to original working directory
     os.chdir(initial_working_dir)

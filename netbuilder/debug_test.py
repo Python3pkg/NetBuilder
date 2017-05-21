@@ -32,7 +32,7 @@ def random_training_set():
     
 def test_AND():
     
-    print('='*80)
+    print(('='*80))
     print("TEST AND")
     #Define input and output layer neurans
     numIn = 2
@@ -65,20 +65,20 @@ def test_AND():
     
     x = input_set[0:1]
     y = target_set[0:1]
-    print(x.shape)
+    print((x.shape))
     test_out = net.feedforward(x)
     print('TEST OUTPUT:')
     print(test_out)
     
     error = mean_squared_error(target=y,actual=test_out)
-    print('ERROR:',error)
-    print('='*80)
+    print(('ERROR:',error))
+    print(('='*80))
     
     return net
 
 def test_XOR():
     
-    print('='*80)
+    print(('='*80))
     print("TEST XOR")
     #Define input and output layer neurans
     numIn = 2
@@ -114,8 +114,8 @@ def test_XOR():
     print(test_out)
     
     error = mean_squared_error(target=target_set,actual=test_out)
-    print('ERROR:',error)
-    print('='*80)
+    print(('ERROR:',error))
+    print(('='*80))
     
     return net
     

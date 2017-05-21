@@ -27,7 +27,7 @@ def mean_squared_error(target,actual,derivative=False):
     try:
         assert(target.shape==actual.shape)
     except AssertionError:
-        print("""Shape of target array '{0}' does not match shape of actual '{1}'""".format(target.shape,actual.shape))
+        print(("""Shape of target array '{0}' does not match shape of actual '{1}'""".format(target.shape,actual.shape)))
         raise
     if not derivative:
         #compute the error and return it    

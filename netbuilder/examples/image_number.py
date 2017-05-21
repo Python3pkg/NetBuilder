@@ -98,8 +98,8 @@ class number(object):
 
 
 def main():
-    inputs1 = [shape.flatten() for shape in shapes.values()]            #creates a list of the values in the dictionary
-    inputs2 = [shape.flatten() for shape in shapes2.values()]
+    inputs1 = [shape.flatten() for shape in list(shapes.values())]            #creates a list of the values in the dictionary
+    inputs2 = [shape.flatten() for shape in list(shapes2.values())]
     
     inputs = inputs1 + inputs2
     #inputs = inputs1
